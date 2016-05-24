@@ -6,10 +6,10 @@
     }
   else
     {
-    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
-    echo "Type: " . $_FILES["file"]["type"] . "<br />";
-    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
+    // echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+    // echo "Type: " . $_FILES["file"]["type"] . "<br />";
+    // echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    // echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
 
     $newfilename = time().'_'.$_FILES["file"]["name"];
 
@@ -22,9 +22,8 @@
       // 	$newfilename = $newfilename.$i;
       // }
 
-      move_uploaded_file($_FILES["file"]["tmp_name"],
-      "upload/" . $newfilename);
-      echo "Stored in: " . "upload/" . $newfilename;
+      move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $newfilename);
+      //echo "Stored in: " . "upload/" . $newfilename;
 
     }
 
