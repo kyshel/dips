@@ -1,3 +1,6 @@
+<div class="page-header">
+	<h1>Select Process Second:</h1>
+</div>
 
 <?php
   if ($_FILES["file"]["error"] > 0)
@@ -28,17 +31,32 @@
     }
 
 
+
+echo '<div class="col-sm-5 show_left" style="background-color: red; " id="origin_img">';
+echo '<p>Original:</p>';
+echo '<img src="upload/'.$newfilename.'" style="width:300px;">';
+echo '</div>';
+
+echo '<div class="col-sm-2 show_mid" style="background-color: orange; " id="process_buttons">';
 echo '
-<form action="smooth.php" method="post"
-enctype="multipart/form-data">
-
-<input name="uploaded_name"  value="'. $newfilename.'"  style="display: none;"/>
-
-<input type="submit" name="submit" value="smooth" />
+<form id="process_form" enctype="multipart/form-data">
+<input name="uploaded_name"  value="'. $newfilename.'"  style="display: none;" id="uploaded_name"/>
+<button type="submit" onclick="name_to_result()">Smooth1</button>
 </form>
-';
 
-echo '<img src="upload/'.$newfilename.'" style="width:150px;">';
+<button onclick="process(this.value)"  value="smooth">Smooth</button>
+<button onclick="process(this.value)"  value="shift">shift</button>
+<button onclick="process(this.value)"  value="rot">rot</button>
+<button onclick="process(this.value)"  value="sobelx">sobelx</button>
+<button onclick="process(this.value)"  value="sobely">sobely</button>
+<button onclick="process(this.value)"  value="edge">edge</button>
+<button onclick="process(this.value)"  value="fft">fft</button>
+
+';
+echo '</div>';
+
+echo '<div class="col-sm-5 show_right" style="background-color: yellow; " id="processed_img"></div>	';
 
 ?>
 
+<!-- <button onclick="process()">process</button> -->

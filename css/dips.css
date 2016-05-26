@@ -38,12 +38,6 @@ code {
 	font-size: 80%;
 }
 
-.show_left{
-	height:300px; 
-}
-.show_mid{
-	height:300px; 
-}
-.show_right{
-	height:300px; 
+#process_container p{
+	    margin: 5px 0 5px;
 }
