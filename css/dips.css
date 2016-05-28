@@ -37,7 +37,27 @@ body > .container {
 code {
 	font-size: 80%;
 }
-
+/* have not to */
 #process_container p{
 	    margin: 5px 0 5px;
+}
+
+.op_btn{
+	width: 100%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.button_container{
+	width: 80%;
+    margin: 0 auto; 
+}
+
+/*------------------   pb   -----------------------*/
+.controls{
+	/*display: inline;*/
+}
+
+.controls input .slider-selection{
+	background: #BABABA;
 }

@@ -9,7 +9,7 @@ require_once("header.php");
 		</div>
 
 		<div>
-			<form id="foo" enctype="multipart/form-data">
+			<form id="" enctype="multipart/form-data" action="pb_uploaded.php" method="post">
 			<label for="file">Filename:</label>
 			<input type="file" name="file" id="file" /> 
 			<br />

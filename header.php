@@ -1,3 +1,7 @@
+<?php
+require_once("load.php");
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -36,9 +40,35 @@
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#contact">About</a></li>
+				<?php
+				echo "<li ";
+				if (php_self() == 'index.php'){
+					echo 'class="active" '; 
+				} 
+				echo '><a href="index.php">Server Side</a></li>';
+
+				echo "<li ";
+				if (php_self() == 'pb.php'){
+					echo 'class="active" '; 
+				} 
+				echo '><a href="pb.php">Client Side</a></li>';
+
+				?>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+ 				<?php
+				echo "<li ";
+				if (php_self() == 'about.php'){
+					echo 'class="active" '; 
+				} 
+				echo '><a href="about.php">About</a></li>';
+
+				?>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </nav>
+
+<!-- Begin page content -->
+<div class="container">

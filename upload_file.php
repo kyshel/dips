@@ -39,22 +39,27 @@ echo '</div>';
 
 echo '<div class="col-sm-2 show_mid" style="background-color: orange; " id="process_buttons">';
 echo '
-<form id="process_form" enctype="multipart/form-data">
-<input name="uploaded_name"  value="'. $newfilename.'"  style="display: none;" id="uploaded_name"/>
+<div class="button_container">
+<form id="process_form" enctype="multipart/form-data" style="display: none;">
+<input name="uploaded_name"  value="'. $newfilename.'"   id="uploaded_name"/>
 <button type="submit" onclick="name_to_result()">Smooth1</button>
-</form>
+</form>';
+?>
 
-<button onclick="process(this.value)"  value="smooth">Smooth</button>
-<button onclick="process(this.value)"  value="shift">shift</button>
-<button onclick="process(this.value)"  value="rot">rot</button>
-<button onclick="process(this.value)"  value="sobelx">sobelx</button>
-<button onclick="process(this.value)"  value="sobely">sobely</button>
-<button onclick="process(this.value)"  value="edge">edge</button>
-<button onclick="process(this.value)"  value="fft">fft</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="smooth">smooth</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="shift">shift</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="rot">rot</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="sobelx">sobelx</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="sobely">sobely</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="edge">edge</button>
+<button onclick="process(this.value)"  class="btn btn-default op_btn" value="fft">fft</button>
 
+<?php
+
+echo '
+</div> <!-- button_container -->
+</div> <!-- process_buttons -->
 ';
-echo '</div>';
-
 echo '<div class="col-sm-5 show_right" style="background-color: yellow; " id="processed_img"></div>	';
 
 ?>
