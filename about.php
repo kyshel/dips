@@ -23,10 +23,7 @@ require_once("header.php");
 <p>Chrome or Opera or FireFox or other modern browser.</p>
 <p>Client Side need &lt;canvas&gt; tag support.</p>
 <h2>Developer</h2>
-<ul>
-<li>QQ: 1069072177</li>
-<li>Tel: 158 6472 8220</li>
-</ul>
+
 
 
 <div style="height: 30px;"></div>
